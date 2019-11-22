@@ -22,4 +22,8 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('visitor/home');
 	}
+	public function berita()
+	{
+		$this->load->view('visitor/berita');
+	}
 }
