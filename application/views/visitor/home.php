@@ -64,7 +64,7 @@
         <a class="nav-link page-scroll" href="#tentang">Tentang</a>
       </li>
       <li class="nav-item active" style="padding-right:15px; padding-left:15px;">
-        <a class="nav-link" href="#">Feedback</a>
+        <a class="nav-link" href="<?= base_url();?>home/feedback">Feedback</a>
       </li>
     </ul>
   </div>
