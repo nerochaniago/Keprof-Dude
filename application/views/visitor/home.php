@@ -49,10 +49,10 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav" style="margin-left:50px;">
       <li class="nav-item active">
-        <a class="nav-link" href="<?base_url();?>" style="padding-right:15px;">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?= base_url();?>" style="padding-right:15px;">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active" style="padding-right:15px; padding-left:15px;">
-        <a class="nav-link" href="<?base_url();?>berita">Berita</a>
+        <a class="nav-link" href="<?= base_url();?>home/berita">Berita</a>
       </li>
       <li class="nav-item active" style="padding-right:15px; padding-left:15px;">
         <a class="nav-link page-scroll" href="#tentang">Layanan</a>

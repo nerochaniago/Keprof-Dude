@@ -49,7 +49,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav" style="margin-left:50px;">
       <li class="nav-item active">
-        <a class="nav-link" href="<?base_url();?>index" style="padding-right:15px;">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?= base_url();?>home/index" style="padding-right:15px;">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
