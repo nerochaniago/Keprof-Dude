@@ -15,19 +15,6 @@
         width:100%;
         max-height: 500px !important;
         }
-        /*css3 design scrollbar*/
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            background: #68BB15;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #076B07;
-        }
 
         html{
           position: relative;
@@ -69,9 +56,7 @@
     </ul>
   </div>
     </nav>
-    <div class="col-sm-12">
-      <hr style=" border:0px; border-top: 3px double #076B07">
-    </div>
+    
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">

@@ -15,19 +15,7 @@
         width:100%;
         max-height: 500px !important;
         }
-        /*css3 design scrollbar*/
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
 
-        ::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            background: #68BB15;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #076B07;
-        }
 
         html{
           position: relative;
@@ -54,12 +42,11 @@
     </ul>
   </div>
     </nav>
-    <div class="col-sm-12">
-      <hr style=" border:0px; border-top: 3px double #076B07">
-    </div>
 
-<h2 style="margin-left:40px;">Berita</h2>
+
+
 <section class="berita" id="berita" style="background-color: rgba(204,209,209,0.3); min-height:400px;">
+  <h2 style="margin-left:40px;">Berita</h2>
   <div class="container">
     <div class="row">
       <div class="col-md-6 mt-5">
