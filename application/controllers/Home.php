@@ -26,4 +26,8 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('visitor/berita');
 	}
+	public function feedback()
+	{
+		$this->load->view('visitor/feedback');
+	}
 }
