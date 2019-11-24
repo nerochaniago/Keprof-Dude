@@ -89,9 +89,11 @@
                       <p style="color:black;">  <?= date("d/F/Y",strtotime($berita['tanggal'])); ?></p>
                       <p style="color:black;"> <?= $berita['isi'];?></p>
                       <!-- <a href="<?= base_url('assets/file/') . $berita['gambar'];?>"class="btn btn-sm btn-danger mb-2">Download Attachment</a> -->
-                      <iframe src="<?= site_url('assets/file/') . $berita['gambar'];?>" style="width:100%; height:500px; border: none;" scrolling="no">
+                      <?php if ($berita['gambar']!= ""): ?>
+                        <iframe src="<?= site_url('assets/file/') . $berita['gambar'];?>" style="width:100%; height:500px; border: none;" scrolling="no">
 
-                    </iframe>
+                      </iframe>
+                      <?php endif; ?>
 
                     <div class="card-action mb-2">
                         <a href="<?= base_url();?>home/index" class="btn btn-primary" style="font-family: Roboto;" >Back</a>
