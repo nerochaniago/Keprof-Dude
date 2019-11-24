@@ -319,9 +319,11 @@
           </form>
 
         </div>
+        <hr>
         <!-- /.container-fluid -->
 
         <div class="container">
+          <h3>View Post</h3>
             <div class="row">
               <div class="col-lg-12">
                 <table id="table_id" class="table table-striped table-bordered ">

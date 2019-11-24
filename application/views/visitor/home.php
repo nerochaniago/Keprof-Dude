@@ -56,7 +56,7 @@
     </ul>
   </div>
     </nav>
-    
+
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -87,68 +87,23 @@
         <hr style="width:300px; border-top:3px solid #666;">
       </div>
     </div>
+
     <div class="row">
-          <div class="col-md-4 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+      <?php foreach ($berita as $p) : ?>
+          <div class="col-md-4 col-sm-12 mb-3">
+            <div class="card" style="width: 22rem;">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title" style="font-family: Roboto;"><?= $p['judul'];?></h5>
+            <span class="badge badge-pill badge-success" style="font-family: Roboto; font-size:13px; "> <?= date("d/F/Y",strtotime($p['tanggal'])); ?></span>
+            <p class="card-text"  style="font-family: Roboto;"><?php $limiter_word = word_limiter($p['isi'],40) ?>
+                             <?= $limiter_word ?></p></p>
+            <a href="<?= base_url();?>home/detailBerita/<?= $p['id'];?>" class="btn btn-success">Read More</a>
           </div>
         </div>
           </div>
-          <div class="col-md-4 col-sm-12">
-                    <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-          </div>
-          <div class="col-md-4">
-                    <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-          </div>
+          <?php endforeach; ?>
     </div>
+
   </div>
 
 </section>
@@ -162,7 +117,8 @@
     </div>
     <div class="row no-gutters">
       <div class="col-md-6">
-        <div class="card" style="width:  820; height:721; background-color: #076B07; ">
+        <div class="card" style="width:  820; height:721; background-color: #076B07; border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;">
           <div class="card-body">
             <h5 class="card-title" style="color:white;">LAYANAN</h5>
             <hr style="color:white; border-top: 1px solid white;">
@@ -178,7 +134,9 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card" style="width: 820; height:721; background-color: #68BB15">
+      <div class="card" style="width: 820; height:721; background-color: #68BB15;
+      border-top-left-radius: 1px;
+      border-bottom-left-radius: 1px;">
         <div class="card-body">
         <h5 class="card-title" style="color:white;">FEEDBACK</h5>
         <hr style="color:white; border-top: 1px solid white;">
@@ -187,7 +145,7 @@
           Feedback bisa disampaikan untuk website ini, <br />
           kepengurusan organisasi, dan lingkungan sekitar. <br />
           Untuk melakukan pengisian dapat menuju ke laman Feedback. <br />
-          <a href="#">FEEDBACK</a>
+
           <br /><br />
         </p>
       </div>
@@ -200,12 +158,12 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 mt-3">
-        <h6 style="color:white;"> &copy; All Right Reserved 2019</h6>
+        <h6 style="color:white; font-family: Roboto; font-size: 13px;"> &copy; All Right Reserved 2019</h6>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <h6 style="color:white;">Developed by Priajago Software Developer</h6>
+        <h6 style="color:white;  font-family: Roboto; font-size: 13px;">Developed by Priajago Software Developer</h6>
       </div>
     </div>
     </div>

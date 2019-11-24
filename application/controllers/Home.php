@@ -20,14 +20,53 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('visitor/home');
+		$this->load->helper('text');
+		$this->load->model('User_model');
+		$data['berita'] = $this->User_model->getBeritaLimit();
+		$this->load->view('visitor/home',$data);
 	}
+
+	public function detailBerita($id){
+      $this->load->model('User_model');
+      $data['berita'] = $this->User_model->getDetailBerita($id);
+      $this->load->view('visitor/detail_berita',$data);
+	}
+
 	public function berita()
 	{
-		$this->load->view('visitor/berita');
+		$this->load->model('User_model');
+		$this->load->helper('text');
+      $this->load->library('pagination');
+      $config['base_url'] = 'http://localhost/web_pkc/home/berita';
+      $config['total_rows'] = $this->User_model->countAllBerita();
+      $config['per_page'] = 6;
+      $config['full_tag_open'] = '<ul class="pagination">';
+      $config['full_tag_close'] = '</ul>';
+
+      $config['next_tag_open'] = '<li class="page-item grey" style="width:50px;">';
+      $config['next_tag_close'] = '</li>';
+
+      $config['prev_tag_open'] = '<li class="page-item grey" style="width:50px;">';
+      $config['prev_tag_close'] = '</li>';
+
+      $config['cur_tag_open'] = '<li class="active green"><a href="#!" style="width:50px;">';
+      $config['cur_tag_close'] = '</a></li>';
+
+      $config['num_tag_open'] = '<li class="page-item" style="width:50px;">';
+      $config['num_tag_close'] = '</li>';
+
+      $config['attributes'] = array('class'=>'page-link');
+
+      $data['start'] = $this->uri->segment(3);
+      $data['berita'] = $this->User_model->getBeritaa($config['per_page'],$data['start']);
+      $this->pagination->initialize($config);
+      $this->load->view('visitor/berita',$data);
 	}
 	public function feedback()
 	{
 		$this->load->view('visitor/feedback');
 	}
+
+
+
 }
