@@ -6,8 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<!-- Font Family -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:600&display=swap" rel="stylesheet">
 
     <title>Home - Permata Kranggan Cibubur</title>
     <style media="screen">
@@ -33,7 +36,7 @@
           position: relative;
         }
         body {
-          margin-bottom: 79px;
+          margin-bottom: 50px;
         }
         .wrapper {
     		text-align: center;
@@ -51,35 +54,35 @@
         <h7 style="color:white; margin-left:25px;">permatakranggancibubur@gmail.com</h7>
     </nav>
     <nav class="navbar navbar-expand-sm sticky-top navbar-light" style="background-color: white; padding-top:20px; padding-bottom:20px;">
-    	<a class="navbar-brand" href=""><h3 style="margin-left:25px; color:green;">Permata Kranggan Cibubur</h3></a>
+    	<a class="navbar-brand" href=""><h3 style="margin-left:25px; color:green; font-family: 'Raleway', sans-serif;">Permata Kranggan Cibubur</h3></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
   		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav" style="margin-left:50px;">
-				<li class="nav-item active">
-					<a class="nav-link" href="<?= base_url();?>" style="padding-right:15px;">Home <span class="sr-only">(current)</span></a>
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url();?>" style="padding-right:15px; font-family: 'Open Sans', sans-serif;">Home <span class="sr-only">(current)</span></a>
 				</li>
-				<li class="nav-item active" style="padding-right:15px; padding-left:15px;">
+				<li class="nav-item" style="padding-right:15px; padding-left:15px; font-family: 'Open Sans', sans-serif;">
 					<a class="nav-link" href="<?= base_url();?>home/berita">Berita</a>
 				</li>
-				<li class="nav-item active" style="padding-right:15px; padding-left:15px;">
-					<a class="nav-link page-scroll" href="#tentang">Layanan</a>
+				<li class="nav-item" style="padding-right:15px; padding-left:15px; font-family: 'Open Sans', sans-serif;">
+					<a class="nav-link page-scroll" href="<?= base_url();?>home/layanan">Layanan</a>
 				</li>
-				<li class="nav-item active" style="padding-right:15px; padding-left:15px;">
-					<a class="nav-link" href="#">Organisasi</a>
+				<li class="nav-item" style="padding-right:15px; padding-left:15px; font-family: 'Open Sans', sans-serif;">
+					<a class="nav-link" href="<?= base_url();?>home/organisasi">Organisasi</a>
 				</li>
-				<li class="nav-item active" style="padding-right:15px; padding-left:15px;">
-					<a class="nav-link page-scroll" href="#tentang">Tentang</a>
+				<li class="nav-item" style="padding-right:15px; padding-left:15px; font-family: 'Open Sans', sans-serif;">
+					<a class="nav-link page-scroll" href="<?= base_url();?>">Tentang</a>
 				</li>
-				<li class="nav-item active" style="padding-right:15px; padding-left:15px;">
-					<a class="nav-link" href="#">Feedback</a>
+				<li class="nav-item active" style="padding-right:15px; padding-left:15px; font-family: 'Open Sans', sans-serif;">
+					<a class="nav-link" href="<?= base_url();?>home/feedback" style="color:green;">Feedback</a>
 				</li>
     		</ul>
   		</div>
     </nav>
 
-	<section class="berita" id="berita" style="background-color: rgba(204,209,209,0.3); min-height:410px;">
+	<section class="berita" id="berita" style="background-color: rgba(204,209,209,0.3); min-height:439px;">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -98,20 +101,20 @@
 		</div>
 	</section>
 
-	<footer style="position:absolute; width:100%; bottom:0; height:79px; background-color: #076B07;">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 mt-3">
-					<h6 style="color:white;"> &copy; All Right Reserved 2019</h6>
+	<footer style="position:absolute; width:100%; bottom:0; height:50px; background-color: #076B07;">
+				<div class="container">
+						<div class="row">
+								<div class="col-6 col-md-4">								
+								</div>
+								<div class="col-6 col-md-4 text-center" style="margin-top:13px">
+										<h6 style="color:white; font-family: 'Open Sans', sans-serif;">&copy; All Right Reserved 2019</h6>
+								</div>
+								<div class="col-6 col-md-4 text-right" style="margin-top:13px">
+										<h6 style="color:white; font-family: 'Open Sans', sans-serif;">Developed by PriaJago Software Developer</h6>
+								</div>
+						</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<h6 style="color:white;">Developed by Priajago Software Developer</h6>
-				</div>
-			</div>
-		</div>
-	</footer>
+		</footer>
 	<!-- Optional JavaScript -->
 	<script type="text/javascript">
 		$('.page-scroll').on('click', function(e) {
