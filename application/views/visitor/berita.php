@@ -15,19 +15,7 @@
         width:100%;
         max-height: 500px !important;
         }
-        /*css3 design scrollbar*/
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
 
-        ::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            background: #68BB15;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #076B07;
-        }
 
         html{
           position: relative;
@@ -54,45 +42,41 @@
     </ul>
   </div>
     </nav>
-    <div class="col-sm-12">
-      <hr style=" border:0px; border-top: 3px double #076B07">
-    </div>
 
-<h2 style="margin-left:40px;">Berita</h2>
+
+
 <section class="berita" id="berita" style="background-color: rgba(204,209,209,0.3); min-height:400px;">
+  <h2 style="margin-left:40px;">Berita</h2>
   <div class="container">
+
     <div class="row">
-      <div class="col-md-6 mt-5">
-        <div class="card border-success mb-3">
-          <div class="card-header bg-transparent border-success">Header</div>
-          <div class="card-body text-success">
-            <h5 class="card-title">Success card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <?php foreach($berita as $p):?>
+      <div class="col-md-4 mt-5">
+        <div class="card border-success">
+          <div class="card-body ">
+            <h5 class="card-title" style="font-family: Roboto; color:black;"><?= $p['judul'];?></h5>
+            <span class="badge badge-pill badge-success" style="font-family: Roboto; font-size:13px; ">published by admin</span>
+            <p style="color:black;">  <?= date("d/F/Y",strtotime($p['tanggal'])); ?></p>
+            <p class="card-text" style="font-family: Roboto; color:black;" ><?php $limiter_word = word_limiter($p['isi'],40) ?>
+                             <?= $limiter_word ?></p>
           </div>
-          <div class="card-footer bg-transparent border-success">Footer</div>
+          <div class="card-footer bg-transparent border-success"><a href="<?= base_url();?>home/detailBerita/<?= $p['id'];?>" class="btn btn-primary">Read More</a></div>
         </div>
       </div>
-        <div class="col-md-6 mt-5">
-          <div class="card border-success mb-3" style="max-width: 18rem;">
-              <div class="card-header bg-transparent border-success">Header</div>
-              <div class="card-body text-success">
-                <h5 class="card-title">Success card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-              <div class="card-footer bg-transparent border-success">Footer</div>
-            </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card border-success mb-3">
-            <div class="card-header bg-transparent border-success">Header</div>
-            <div class="card-body text-success">
-              <h5 class="card-title">Success card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <div class="card-footer bg-transparent border-success">Footer</div>
-          </div>
-        </div>
+      <?php endforeach;?>
+
+
     </div>
+
+  </div>
+  <div class="container">
+    <div class="row">
+                <div class="col-md-6 mt-5">
+
+                    <?=$this->pagination->create_links();?>
+
+                </div>
+              </div>
   </div>
 
 </section>

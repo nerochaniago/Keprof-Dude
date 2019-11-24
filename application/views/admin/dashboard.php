@@ -62,7 +62,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="buttons.html">Post & View Post</a>
+            <a class="collapse-item" href="<?= base_url();?>user/post">Post & View Post</a>
           </div>
         </div>
       </li>
